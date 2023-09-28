@@ -70,8 +70,6 @@ const config: Partial<GlobalConfig> = {
   ],
   // https://semantic-release.gitbook.io/semantic-release/usage/configuration#ci
   ci: customOptions.ci,
-  // https://semantic-release.gitbook.io/semantic-release/usage/configuration#debug
-  debug: false,
   // https://semantic-release.gitbook.io/semantic-release/usage/configuration#dryrun
   dryRun: customOptions.dryRun,
   plugins: (() => {
