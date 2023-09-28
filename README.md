@@ -1,47 +1,56 @@
-[![Deploy Documentation](https://github.com/abelflopes/typescript-library-template/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/abelflopes/typescript-library-template/actions/workflows/deploy-docs.yml)
-&nbsp;
-[![Release](https://github.com/abelflopes/typescript-library-template/actions/workflows/release.yml/badge.svg)](https://github.com/abelflopes/typescript-library-template/actions/workflows/release.yml)
-&nbsp;
-[![Validate](https://github.com/abelflopes/typescript-library-template/actions/workflows/validate.yml/badge.svg)](https://github.com/abelflopes/typescript-library-template/actions/workflows/validate.yml)
+# Semantic Release Conventional
 
-# Typescript Library Package Template
+[**semantic-release**](https://github.com/semantic-release/semantic-release) shareable config to publish npm packages with [GitHub](https://github.com) using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) standard.
 
-A plug and play template project to help you quickly implement and distribute a library, written in typescript.
+## Plugins
 
-## Features
+This shareable configuration use the following plugins:
 
-- **Typescript** with file emitting to dist
-- Strict code linting and formatting setup with **eslint** and **prettier**
-- Plug and play tests **with** jest
-- Compatible git, editor, prettier and eslint configs so that you don't run into linebreak related issues with contributors using other operating systems (unix/windows)
-- **Automated documentation generation** based on code annotations with automated deployment through CI/CD workflows, check it [here](https://abelflopes.github.io/typescript-library-template/)
-- Listing of TODO's and FIXME's in code
-- Validation CI/CD workflow
-- **Automated versioning** with conventional commits and automated release through CI/CD workflows
-- Github action to cleanup workflows and caches
-- Local branch name validation & local + CI commit validation
+- [`@semantic-release/commit-analyzer`](https://github.com/semantic-release/commit-analyzer)
+- [`@semantic-release/release-notes-generator`](https://github.com/semantic-release/release-notes-generator)
+- [`@semantic-release/changelog`](https://github.com/semantic-release/changelog)
+- [`@semantic-release/npm`](https://github.com/semantic-release/npm)
+- [`@semantic-release/github`](https://github.com/semantic-release/github)
+- [`@semantic-release/git`](https://github.com/semantic-release/git)
 
-## Using the template
+## Installation
 
-- [Guide](./docs/USING_THIS_TEMPLATE.md)
-- [Development](./docs/DEVELOPMENT.md)
+You can install this config via npm or yarn:
 
-## Tech stack
+```bash
+npm install semantic-release-config-conventional --save-dev
+# or
+yarn add semantic-release-config-conventional --dev
+```
 
-[Typescript](https://www.typescriptlang.org/)
-&nbsp;
-[Jest](https://jestjs.io/)
-&nbsp;
-[Husky](https://github.com/typicode/husky)
-&nbsp;
-[Commitlint](https://commitlint.js.org/#/)
-&nbsp;
-[Github Actions](https://docs.github.com/en/actions)
-&nbsp;
-[Semantic Release](https://semantic-release.gitbook.io/semantic-release/)
-&nbsp;
-[Eslint](https://eslint.org/)
-&nbsp;
-[Prettier](https://prettier.io/)
-&nbsp;
-[Typedoc](https://typedoc.org/)
+## Usage
+
+The shareable config can be configured in the [**semantic-release** configuration file](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration):
+
+To use this configuration in your project, create a Prettier configuration file
+(e.g., .prettierrc.js) and extend `semantic-release-config-conventional`:
+
+
+```js
+// .releaserc.js
+
+module.exports = {
+    extends: "semantic-release-config-conventional"
+};
+```
+
+<!-- TODO: add 
+
+## Additional Recommended setup
+
+-->
+
+## Configuration
+
+See each [plugin](#plugins) documentation for required installation and configuration steps.
+
+## Contributing
+
+If you encounter any issues with this ESLint configuration or have suggestions for improvements,
+please visit the GitHub repository and open an issue or pull request.
+Check also the [development](./docs/DEVELOPMENT.md) docs.

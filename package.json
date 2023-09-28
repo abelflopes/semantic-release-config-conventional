@@ -1,5 +1,5 @@
 {
-  "name": "@abelflopes/typescript-library-template",
+  "name": "semantic-release-config-conventional",
   "version": "1.0.0",
   "description": "Example package built from the typescript library template",
   "main": "dist/index.js",
@@ -14,15 +14,16 @@
     "test": "jest",
     "lint": "eslint . --ext ts,tsx",
     "format": "npx prettier . --check --cache",
-    "docs": "typedoc",
     "todo": "npx leasot '**/**' '.**/**' -i '**/node_modules/**' -S -x",
     "clean": "rm -rf generated-docs dist node_modules"
   },
   "keywords": [
-    "typescript",
-    "library",
-    "template",
-    "boilerplate"
+    "release",
+    "ci-cd",
+    "automated",
+    "versioning",
+    "deployment",
+    "changelog"
   ],
   "author": "Abel Lopes (@abelflopes)",
   "devDependencies": {
@@ -32,8 +33,6 @@
     "@babel/preset-typescript": "^7.22.15",
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
     "@types/jest": "^29.5.5",
     "conventional-changelog-conventionalcommits": "^7.0.2",
     "eslint": "^8.49.0",
@@ -41,15 +40,19 @@
     "jest": "^29.7.0",
     "prettier": "^3.0.3",
     "semantic-release": "^22.0.1",
-    "typedoc": "^0.25.1",
     "typescript": "^5.2.2"
   },
-  "homepage": "https://github.com/abelflopes/typescript-library-template#readme",
+  "peerDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^22.0.0"
+  },
+  "homepage": "https://github.com/abelflopes/semantic-release-config-conventional#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/abelflopes/typescript-library-template.git"
+    "url": "https://github.com/abelflopes/semantic-release-config-conventional.git"
   },
   "bugs": {
-    "url": "https://github.com/abelflopes/typescript-library-template/issues"
+    "url": "https://github.com/abelflopes/semantic-release-config-conventional/issues"
   }
 }
