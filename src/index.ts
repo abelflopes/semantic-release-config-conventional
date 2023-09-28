@@ -37,9 +37,9 @@ const customOptions = {
   // - pushing to remote
   dryRun: cliArguments.includes("dryrun") || false,
   // If to tot true will publish package to registry
-  npmPublish: env.npmPublish === undefined ? env.npmPublish === "true" : true,
+  npmPublish: env.npmPublish === undefined ? true : env.npmPublish === "true",
   // If set to true, will push version & changelog changes to remote
-  push: env.push === undefined ? env.npmPublish === "true" : true,
+  push: env.push === undefined ? true : env.npmPublish === "true",
   // Path for changelog file
   changelogFile: env.changelogFile ?? "CHANGELOG.md",
 };
