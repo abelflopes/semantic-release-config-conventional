@@ -11,6 +11,7 @@
     "prepare": "husky install",
     "start": "tsc -p tsconfig.build.json -w",
     "build": "tsc -p tsconfig.build.json",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "lint": "eslint . --ext ts,tsx",
     "format": "npx prettier . --check --cache",
     "todo": "npx leasot '**/**' '.**/**' -i '**/node_modules/**' -S -x",
