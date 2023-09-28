@@ -1,0 +1,11 @@
+# build output
+dist
+
+# dependencies
+node_modules
+
+# automatically generated docs
+generated-docs
+
+# npm config
+.npmrc
