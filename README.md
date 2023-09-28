@@ -2,16 +2,7 @@
 
 [**semantic-release**](https://github.com/semantic-release/semantic-release) shareable config to publish npm packages with [GitHub](https://github.com) using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) standard.
 
-## Plugins
 
-This shareable configuration uses the following plugins (with [internal configurations](https://github.com/abelflopes/semantic-release-config-conventional/blob/master/src/index.ts) applied):
-
-- [`@semantic-release/commit-analyzer`](https://github.com/semantic-release/commit-analyzer)
-- [`@semantic-release/release-notes-generator`](https://github.com/semantic-release/release-notes-generator)
-- [`@semantic-release/changelog`](https://github.com/semantic-release/changelog)
-- [`@semantic-release/npm`](https://github.com/semantic-release/npm)
-- [`@semantic-release/github`](https://github.com/semantic-release/github)
-- [`@semantic-release/git`](https://github.com/semantic-release/git)
 
 ## Installation
 
@@ -54,6 +45,19 @@ module.exports = {
 };
 ```
 
+See each [plugin](#plugins) documentation for required installation and configuration steps.
+
+## Plugins
+
+This shareable configuration uses the following plugins (with [internal configurations](https://github.com/abelflopes/semantic-release-config-conventional/blob/master/src/index.ts) applied):
+
+- [`@semantic-release/commit-analyzer`](https://github.com/semantic-release/commit-analyzer)
+- [`@semantic-release/release-notes-generator`](https://github.com/semantic-release/release-notes-generator)
+- [`@semantic-release/changelog`](https://github.com/semantic-release/changelog)
+- [`@semantic-release/npm`](https://github.com/semantic-release/npm)
+- [`@semantic-release/github`](https://github.com/semantic-release/github)
+- [`@semantic-release/git`](https://github.com/semantic-release/git)
+
 ## Additional Recommended Setup
 
 For optimal experience and consistency with sematic release, it is suggested to add commit validation matching the standard applied to semantic-release, in this case `conventional-commits`.
@@ -61,11 +65,6 @@ For optimal experience and consistency with sematic release, it is suggested to 
 Ideally the releases should be performed through CI/CD workflows, reducing the possibility of human error. The commit validation should also run on the CI/CD workflows.
 
 Check the [example/recipe](https://github.com/abelflopes/semantic-release-config-conventional/tree/master/docs/example).
-
-
-## Configuration
-
-See each [plugin](#plugins) documentation for required installation and configuration steps.
 
 ## Contributing
 
