@@ -4,7 +4,7 @@
 
 ## Plugins
 
-This shareable configuration use the following plugins:
+This shareable configuration uses the following plugins (with [internal configurations](https://github.com/abelflopes/semantic-release-config-conventional/blob/master/src/index.ts) applied):
 
 - [`@semantic-release/commit-analyzer`](https://github.com/semantic-release/commit-analyzer)
 - [`@semantic-release/release-notes-generator`](https://github.com/semantic-release/release-notes-generator)
@@ -30,7 +30,6 @@ The shareable config can be configured in the [**semantic-release** configuratio
 To use this configuration in your project, create a Prettier configuration file
 (e.g., .prettierrc.js) and extend `semantic-release-config-conventional`:
 
-
 ```js
 // .releaserc.js
 
@@ -39,11 +38,30 @@ module.exports = {
 };
 ```
 
-<!-- TODO: add 
+### Configuration
 
-## Additional Recommended setup
+This config can be provided with some options through environment variables
 
--->
+```js
+// .releaserc.js
+
+process.env.SR_CONFIG_NPM_PUBLISH = "false"; // if set to false will not attempt to publish a package to the registry
+process.env.SR_CONFIG_NPM_PUSH = "true"; // if set to false will disable pushing of the package.json and changelog files after releasing
+process.env.SR_CONFIG_CHANGELOG_FILE = "CHANGELOG.md"; // defines the path for the changelog file
+
+module.exports = {
+    extends: "semantic-release-config-conventional"
+};
+```
+
+## Additional Recommended Setup
+
+For optimal experience and consistency with sematic release, it is suggested to add commit validation matching the standard applied to semantic-release, in this case `conventional-commits`.
+
+Ideally the releases should be performed through CI/CD workflows, reducing the possibility of human error. The commit validation should also run on the CI/CD workflows.
+
+Check the [example/recipe](https://github.com/abelflopes/semantic-release-config-conventional/tree/master/docs/example).
+
 
 ## Configuration
 
