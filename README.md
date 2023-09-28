@@ -2,7 +2,15 @@
 
 [**semantic-release**](https://github.com/semantic-release/semantic-release) shareable config to publish npm packages with [GitHub](https://github.com) using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) standard.
 
+## Features
 
+- Allow running dry run (release predict) on any branch
+- Commits are analyzed with conventional commits parser, configuration extended so that `refactor` & `style` types increase patch version
+- Release notes are generated and written to che changelog covering all the common commit types relevant to the consumer
+- Automatically generated changelog
+- Publishes to a npm package registry
+- Creates a Github release
+- Pushes `package.json` and `CHANGELOG.md` file to git
 
 ## Installation
 
